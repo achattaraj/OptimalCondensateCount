@@ -1,0 +1,5 @@
+1. Biased_first_traj and Biased_second_traj contain input files to run metadynamics simulations that bring cytosolic molecules near the membrane. "FromMemDist.colvars" is the configuration file that specifies the order parameter (or collective variable).
+
+2. First_traj starts with uniformly distributed initial configuration (IC_Neph80.data) and runs for 250 million timesteps. Second_traj starts with the last timeframe from first_traj (final_state_Run*_Neph80_Ens05.restart) and again runs for 250 million steps. 
+
+3. Unbiased_traj contains input files for standard Langevin Dynamics (without bias) that start with the last snapshots from "Biased_second_traj" simulations (final_state_r*_neph80_Ens05.restart). We compute the surface area and volume of the hemispherical cluster from these trajectories.   
